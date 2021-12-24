@@ -1,0 +1,219 @@
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  padding: 50px 130px 0;
+  position: relative;
+}
+
+.background {
+  z-index: -1;
+  position: absolute;
+  background: #edf2f6;
+  width: 50%;
+  right: 0;
+  top: 0;
+  height: 370px;
+  border-radius: 0 0 0 80px;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 100px;
+}
+
+nav .ham {
+  display: none;
+}
+
+nav .nav-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+nav .nav-links .nav-items {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 700;
+  margin: 0 15px;
+  cursor: pointer;
+  color: #242942;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+}
+
+nav .nav-links .nav-items:hover {
+  text-decoration: underline;
+}
+
+nav .nav-links .login {
+  color: #5b5f71;
+}
+
+nav .nav-links .dot {
+  position: relative;
+  cursor: unset;
+}
+
+nav .nav-links .dot::before {
+  position: absolute;
+  content: "";
+  background-color: #5b5f7170;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  top: 10px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+main {
+  display: -ms-grid;
+  display: grid;
+  position: relative;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 250px;
+}
+
+main .intro {
+  position: absolute;
+  right: -420px;
+  max-width: 900px;
+}
+
+main .copy .label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .copy .label .new {
+  padding: 3px 10px;
+  text-transform: uppercase;
+  border-radius: 30px;
+  background-color: #242942;
+  color: white;
+  font-weight: 700;
+  font-family: "Barlow Condensed", sans-serif;
+  margin-right: 10px;
+}
+
+main .copy .label .title {
+  color: #5b5f71;
+  text-transform: uppercase;
+  font-family: "Barlow Condensed", sans-serif;
+  letter-spacing: 2px;
+}
+
+main .copy .head {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 900;
+  color: #242942;
+  text-transform: uppercase;
+  font-size: 3.5em;
+  line-height: 92%;
+}
+
+main .copy .discp {
+  font-family: "Barlow", sans-serif;
+  color: #a0a1ac;
+  width: 250px;
+}
+
+main .copy .buttons .btn {
+  background-color: #ff5c5c;
+  color: white;
+  text-transform: uppercase;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 700;
+  font-size: 1em;
+  letter-spacing: .5px;
+  margin-right: 10px;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  cursor: pointer;
+}
+
+main .copy .buttons .btn:hover {
+  background: #ff5c5c8f;
+}
+
+main .copy .buttons .title {
+  color: #5b5f71;
+  text-transform: uppercase;
+  font-family: "Barlow Condensed", sans-serif;
+  letter-spacing: 2px;
+}
+
+@media screen and (max-width: 376px) {
+  body {
+    padding: 30px 30px;
+  }
+  .background {
+    height: 410px;
+  }
+  nav .nav-items {
+    display: none;
+  }
+  nav .ham {
+    display: block;
+  }
+  main {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    margin-bottom: 50px;
+  }
+  main .copy {
+    -ms-grid-row: 2;
+    grid-row: 2;
+  }
+  main .copy .head {
+    font-size: 2.2em;
+  }
+  main .copy .discp {
+    margin-bottom: 30px;
+  }
+  main .copy .buttons .title {
+    letter-spacing: 1px;
+  }
+  main .copy .label .title {
+    color: #5b5f71;
+    text-transform: uppercase;
+    font-family: "Barlow Condensed", sans-serif;
+    letter-spacing: 5px;
+  }
+  main .intro {
+    top: -50px;
+    right: -160px;
+    max-width: 482px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,181 @@
+@import 'variables';
+@import 'global';
+
+body{
+    padding: 50px 130px 0;
+    position: relative;
+}
+
+.background{
+    z-index: -1;
+    position: absolute;
+    background: #edf2f6;
+    width: 50%;
+    right: 0;
+    top: 0;
+    height: 370px;
+    border-radius: 0 0 0 80px;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 100px;
+    .ham{display: none;}
+    .nav-links{
+        display: flex;
+        .nav-items{
+            font-family: $barlow-condensed;
+            font-weight: 700;
+            margin: 0 15px;
+            cursor: pointer;
+            color: $Very-Dark-Blue;
+            letter-spacing: .5px;
+            text-transform: uppercase;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+        .login{
+            color: $Dark-Grayish-Blue;
+        }
+        .dot{
+            position: relative;
+            cursor: unset;
+            &::before{
+                position: absolute;
+                content: "";
+                background-color: #5b5f7170;
+                width: 5px;
+                height: 5px;
+                border-radius: 50%;
+                top: 10px;
+                left: 0;
+                right: 0;
+                bottom: 0;
+
+            }
+        }
+
+    }
+}
+
+main{
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(2,1fr );
+    margin-bottom: 250px;
+    .intro{
+        position: absolute;
+        right: -420px;
+        max-width: 900px;
+    }
+    .copy{
+        .label{
+            display: flex;
+            align-items: center;
+
+            .new{
+                padding: 3px 10px;
+                text-transform: uppercase;
+                border-radius: 30px;
+                background-color: $Very-Dark-Blue;
+                color: white;
+                font-weight: 700;
+                font-family: $barlow-condensed;
+                margin-right: 10px;
+            }
+            .title{
+                color: $Dark-Grayish-Blue;
+                text-transform: uppercase;
+                font-family: $barlow-condensed;
+                letter-spacing: 2px;
+            }
+        }
+        .head{
+            font-family: $barlow-condensed;
+            font-weight: 900;
+            color: $Very-Dark-Blue;
+            text-transform: uppercase;
+            font-size: 3.5em;
+            line-height: 92%;
+        }
+        .discp{
+            font-family: $barlow;
+            color: $Grayish-Blue;
+            width: 250px;
+        }
+        .buttons{
+            .btn{
+                background-color: $Red;
+                color: white;
+                text-transform: uppercase;
+                padding: 10px 15px;
+                border: none;
+                border-radius: 5px;
+                font-family: $barlow-condensed;
+                font-weight: 700;
+                font-size: 1em;
+                letter-spacing: .5px;
+                margin-right: 10px;
+                transition: all 200ms ease-in-out ;
+                cursor: pointer;
+                &:hover{
+                    background:#ff5c5c8f;
+                }
+            }
+            .title{
+                color: $Dark-Grayish-Blue;
+                text-transform: uppercase;
+                font-family: $barlow-condensed;
+                letter-spacing: 2px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:376px) {
+    body{
+        padding: 30px 30px;
+    }
+    .background{height: 410px;}
+    nav{
+        .nav-items{
+            display: none;
+        }
+        .ham{
+            display: block;
+        }
+    }
+    main{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        margin-bottom: 50px;
+        .copy{
+            grid-row: 2;
+            .head{
+                font-size: 2.2em;
+            }
+            .discp{
+                margin-bottom: 30px;
+            }
+            .buttons{
+                .title{
+                    letter-spacing: 1px;
+                }
+            }
+            .label .title {
+                color: #5b5f71;
+                text-transform: uppercase;
+                font-family: "Barlow Condensed", sans-serif;
+                letter-spacing: 5px;
+            }
+        }
+        .intro {
+            top: -50px;
+            right: -160px;
+            max-width: 482px;
+        }
+        
+    }
+}
